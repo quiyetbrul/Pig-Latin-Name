@@ -1,4 +1,4 @@
-# PigLatin
+# Pig Latin Transform
 Transform your name into pig latin!
 
 Skills acquired/enhanced:
