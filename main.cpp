@@ -2,7 +2,7 @@
 //  PigLatinName
 //
 //  Created by Quiyet Brul on 6/13/19.
-//  Copyright © 2019 Quiyet Brul. All rights reserved.
+//  Copyright ï¿½ 2019 Quiyet Brul. All rights reserved.
 #include <iostream>
 #include <string>
 
@@ -14,11 +14,18 @@ std::string toLower(std::string str)
 	}
 	return str;
 }
+
+bool isVowel(char c) 
+{ 
+  c = tolower(c);
+    return (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u'); 
+} 
+
 std::string pigLatin(std::string instr)
 {
 	std::string pigLatin1;
 
-	if (instr[0] != 'a' && instr[0] != 'e' && instr[0] != 'i' && instr[0] != 'o' && instr[0] != 'u')
+	if (!isVowel(instr[0]))
 	{
 		for (int i = 1; i < instr.length(); i++)
 		{
@@ -30,9 +37,9 @@ std::string pigLatin(std::string instr)
 	{
 		pigLatin1 = instr + "way";
 	}
-
 	return pigLatin1;
 }
+
 int main()
 {
 	std::string first, last;
